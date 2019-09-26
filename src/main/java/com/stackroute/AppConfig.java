@@ -4,7 +4,6 @@ import com.stackroute.domain.Actor;
 import com.stackroute.domain.Movie;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class AppConfig {
@@ -24,7 +23,7 @@ public class AppConfig {
 
     @Bean(name = {"M1", "M2"})
     public Movie movie(){
-        Movie movie = new Movie(actor3());
+        Movie movie = new Movie();
         return movie;
     }
 }
